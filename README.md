@@ -141,9 +141,16 @@ The aim here is to help ensure you are up and running quick. Once you pass the c
 
 This is pretty rough, and can be better, but its a start ;-) Feedback Welcome.
 -Additional Idea:
+
   Fiddler debugging
+  
   Simple DNS C2, etc..
+  
   WebShell
+  
+  WSH Harnesses, JSScript, VBScript, VBA, HTA, SCT etc...
+  
+  
   
 These are just some prototypes. 
   
