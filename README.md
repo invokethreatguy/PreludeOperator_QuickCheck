@@ -139,5 +139,9 @@ $response_delivery = Invoke-RestMethod -Uri $PreludeHTTPDomain -Method Post -Bod
 
 The aim here is to help ensure you are up and running quick. Once you pass the check you are ready to start deploying more aggressive tests.
 
-This is pretty ugly, and can be better, but its a start ;-) Feedback Welcome.
+This is pretty rough, and can be better, but its a start ;-) Feedback Welcome.
+-Additional Idea:
+  Fiddler debugging
+  Simple DNS C2, etc..
+  
 
