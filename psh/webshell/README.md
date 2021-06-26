@@ -16,7 +16,7 @@ Your public key has been saved in C:\Users\mobile/.ssh/id_rsa.pub.
 
 ![Screen Shot 2021-06-25 at 8 42 53 PM](https://user-images.githubusercontent.com/83469949/123499713-efb12580-d5f5-11eb-8c84-6caa656e36f1.png)
 
-### Execute Simple Web Shell
+### Execute Simple Web Shell - Works best as Admin.
 
 ```
 <#
