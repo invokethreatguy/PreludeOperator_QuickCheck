@@ -25,7 +25,7 @@ function Receive-Request {
 }
 
 $listener = New-Object System.Net.HttpListener
-$listener.Prefixes.Add('http://+:8080/') 
+$listener.Prefixes.Add('http://localhost:8080/') #binding to local host allows us to run as normal user. Confirm
 
 $listener.Start()
 'Listening ...'
