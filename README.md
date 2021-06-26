@@ -2,7 +2,7 @@
 Simple Powershell Prelude Operator Quick Check
 
 In this example, we will use `boomtown.ngrok.io` There are a couple ways to redirect HTTP.  
-You should replace this with either your ngork instance or your redirector.
+You should replace this with either your ngrok instance or your redirector.
 The preferred method is a Gateway Redirector.
 
 [Cloudy with a chance of redirectors](https://feed.prelude.org/p/cloudy-with-a-chance-of-redirectors)
