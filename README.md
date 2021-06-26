@@ -1,7 +1,9 @@
 # PreludeOperator_QuickCheck
 Simple Powershell Prelude Operator Quick Check
 
-In this example, we will use `boomtown.ngrok.io` There are a couple ways to reidrect HTTP.  The preferred method is a Gateway Redirector.
+In this example, we will use `boomtown.ngrok.io` There are a couple ways to reidrect HTTP.  
+You should replace this with either your ngork instance or your redirector.
+The preferred method is a Gateway Redirector.
 [Cloudy with a chance of redirectors](https://feed.prelude.org/p/cloudy-with-a-chance-of-redirectors)
 
 ## Create a TTP
@@ -122,3 +124,10 @@ $response_delivery = Invoke-RestMethod -Uri "https://boomtown.ngrok.io" -Method 
 ![Screen Shot 2021-06-25 at 7 49 29 PM](https://user-images.githubusercontent.com/83469949/123498652-909be280-d5ee-11eb-8a3c-afe20b6133af.png)
 
 ![Screen Shot 2021-06-25 at 7 49 41 PM](https://user-images.githubusercontent.com/83469949/123498655-9396d300-d5ee-11eb-8c23-b7c0e59111e6.png)
+
+
+## Conclusion
+
+The aim here is to help ensure you are up and running quick. Once you pass the check you are ready to start deploying more aggressive tests.
+
+
