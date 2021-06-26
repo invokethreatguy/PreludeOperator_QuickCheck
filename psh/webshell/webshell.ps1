@@ -5,7 +5,7 @@
   
 #>
 
-$Server = '127.0.0.1' #Listening IP. Change This. Or make it a parameter, I don't care ;-)
+$Server = 'localhost' #Listening IP. Change This. Or make it a parameter, I don't care ;-)
 
 function Receive-Request {
    param(      
