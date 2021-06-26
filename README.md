@@ -52,7 +52,7 @@ You should have a call back
 
 ## Deploy The Adversary To Your BoomTown Range
 
-![Screen Shot 2021-06-25 at 7 37 13 PM](https://user-images.githubusercontent.com/83469949/123498596-2c791e80-d5ee-11eb-9eba-983d6c4cbbcb.png)
+![Screen Shot 2021-06-25 at 7 47 08 PM](https://user-images.githubusercontent.com/83469949/123498694-d5c01480-d5ee-11eb-9008-bf83052a4b97.png)
 
 
 ## Run The PowerShell Simple Stager
