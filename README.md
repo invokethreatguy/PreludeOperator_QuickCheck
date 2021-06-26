@@ -20,7 +20,7 @@ The preferred method is a Gateway Redirector.
 
 Ngrok Example - 
 
-`ngrok http --region=us --hostname=boomtown.ngrok.io 80`
+`ngrok http --region=us --hostname=boomtown.ngrok.io 3391`
 
 
 Deploy a Cloud Gateway Redirector
