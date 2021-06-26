@@ -101,5 +101,7 @@ Note the local port your Web Shell is listening to is 8080.
 
 ### Now recreate this activity , and delivery and test with Prelude.
 
+### Advantage of this is you don't require the ngrok binary locally. SSH is native to windows.
+
 
 
