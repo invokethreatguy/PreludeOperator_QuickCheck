@@ -143,5 +143,8 @@ This is pretty rough, and can be better, but its a start ;-) Feedback Welcome.
 -Additional Idea:
   Fiddler debugging
   Simple DNS C2, etc..
+  WebShell
+  
+These are just some prototypes. 
   
 
