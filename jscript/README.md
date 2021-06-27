@@ -10,7 +10,7 @@ The simple agent checkin_minimalist.js, supports the cmd executor.
 
 ## cscript
 
-`cscript dotnet_interop.js`
+`cscript checkin_minimalist.js`
 
 Create a simple TTP that uses cmd executor
 
