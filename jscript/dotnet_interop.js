@@ -93,4 +93,15 @@ Return Response. x done
 figure out proper status
 proper error handling / try catch.
 get proper PID
+
+There are 2 ways showcased here, .NET, and WinHttp.WinHttpRequest.5.1
+Pros and Cons to each .NET actctx, drops .tmp in TEMP env path.
+You could change that with new ActiveXObject('WScript.Shell').Environment('Process')('TMP') = 'C:\\Path';
+or new ActiveXObject('WScript.Shell').Environment('Process')('TEMP') = 'C:\\Tools'; // It think is TMP, but need to check
+
+Also, proper integration with Prelude Payloads, variables etc..
+Liklely need to figuere out to write an executor? 
+so that C:\\File\path doesn't get escaped out to C:Filepath etc...
+
+
 */
