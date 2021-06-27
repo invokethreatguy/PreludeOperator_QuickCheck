@@ -1,8 +1,8 @@
 ## Examples in JScript.
 
-Most basic agent checkin, this supports the cmd executor.
+The simple agent checkin_minimalist.js, supports the cmd executor.
 
-`cscript.exe checkin_minimalist.js]`
+`cscript.exe checkin_minimalist.js`
 
 ## COM Scriptlet
 
