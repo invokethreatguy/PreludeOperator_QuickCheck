@@ -1,6 +1,8 @@
 ## Examples in JScript.
 
-`cscript.exe [filename.js]`
+Most basic agent checkin, this supports the cmd executor.
+
+`cscript.exe checkin_minimalist.js]`
 
 ## COM Scriptlet
 
